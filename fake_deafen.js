@@ -7,6 +7,14 @@ WebSocket.prototype.send = function (data) {
         window.deafen = (function () {
             this._send(data);
         }).bind(this);
+
+        if (!document.querySelector("button[aria-label='Deafen'][style]")) {
+            let deafen_btn = document.querySelector("button[aria-label='Deafen']");
+            let fake_deafen_btn = deafen_btn.cloneNode(true);
+            fake_deafen_btn.style.backgroundColor = 'red';
+            fake_deafen_btn.onclick = window.deafen;
+            deafen_btn.parentNode.insertBefore(fake_deafen_btn, deafen_btn);
+        }
     }
     this._send(data);
 }

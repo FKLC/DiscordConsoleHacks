@@ -10,4 +10,4 @@ Discord client is a Chromium app, which means we can use developer tools inside 
  - `auth_code_extractor.js`: Helps getting `Authorization` header programmatically. There are other ways, but this automates it and allows you to use it in JS.
 	 - Interact with Discord, so that it can catch a request and export it. The easiest way is typing for a while.
  - `fake_deafen.js`: Fakes Discord as if you are being deafened but you can still hear (You will still be able to talk, so be sure to mute your mic).
-	 - Deafen yourself and open back. Go back to console, and type `deafen()`, and hit enter.
+	 - Deafen yourself and open back. A red deafen button should appear.
